@@ -19,12 +19,15 @@
   "homepage": "https://github.com/shuding/nextra-docs-template#readme",
   "dependencies": {
     "clsx": "^2.1.1",
+    "framer-motion": "^12.23.26",
+    "katex": "^0.16.27",
     "lucide-react": "^0.544.0",
     "next": "^13.0.6",
     "nextra": "^2.13.4",
     "nextra-theme-docs": "^2.13.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-katex": "^3.1.0",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
