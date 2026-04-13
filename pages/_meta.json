@@ -1,8 +1,7 @@
 {
   "index": "Página inicial",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
-  "stem-courses": "Cursos de STEM (Em desenvolvimento)",
+  "Artigos": "Artigos",
+  "stem-courses": "Cursos de STEM",
   "about": {
     "title": "Sobre nós",
     "type": "page"
