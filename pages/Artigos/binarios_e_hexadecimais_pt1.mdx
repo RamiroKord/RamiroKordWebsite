@@ -1,15 +1,15 @@
 ---
-title: 'Números Binários: O Guia Completo para Entender Criptomoedas'
+title: 'Números Binários: O Guia Completo'
 author: 'Ramiro Kord'
 publishedDate: '2025-09-29'
 lastRevisedDate: '2025-09-29'
-description: 'Guia completo e interativo sobre sistemas binários: aprenda como funcionam, por que são fundamentais para computadores e criptomoedas, com exemplos práticos e conversores.'
+description: 'Guia completo e interativo sobre sistemas binários: aprenda como funcionam e por que são fundamentais para computadores, com exemplos práticos e conversores.'
 ---
 
 import Image from 'next/image'
 import AudioWord from '../../components/AudioWord'
 
-# Binários e Hexadecimais: O Guia Completo para Entender Criptomoedas (Parte 1 de 2: Binários)
+# Binários e Hexadecimais: O Guia Completo sobre Sistemas Numéricos (Parte 1 de 2: Binários)
 
 Autor: Ramiro Kord ([&commat;RamiroKord](http://www.x.com/ramirokord))
 
@@ -19,17 +19,17 @@ Nycazael ([&commat;Nycazael](http://www.x.com/nycazael))
 
 ## Introdução
 
-Um dia desses, conversei com um amigo que me tem acompanhado num curso sobre os aspectos técnicos de criptomoedas, tais como blockchain e contratos inteligentes. Ele me disse: “Tive dificuldades para absorver toda a questão dos números hexadecimais. Vi um tal $\textrm{0x01AF}$ e pensei: 'O quê?'. Ainda bem que estamos na época do ChatGPT.”
+Um dia desses, conversei com um amigo que estava estudando por conta própria alguns aspectos técnicos de computação e programação. Ele me disse: "Tive dificuldades para absorver toda a questão dos números hexadecimais. Vi um tal $\textrm{0x01AF}$ e pensei: 'O quê?'. Ainda bem que estamos na época do ChatGPT."
 
 Amigo… Eu aprendi isso na disciplina de Eletrônica Digital no meu curso de Engenharia de Computação. Sim, sistemas numéricos tais como binários e hexadecimais fazem parte de algo que todos os alunos de ciência e engenharia da computação estudam em algum momento. E, no meu caso, está tão entranhado em minha cabeça que nem me ocorreu que é algo que pode não vir naturalmente para todas as pessoas.
 
-Pensando nisso, escrevo agora este guia que pretendo que seja exaustivo, porém em linguagem didática, e que explique a raiz de cada coisa no mundo dos sistemas numéricos comumente utilizados nas criptomoedas – o que nada mais é que uma aplicação de ciência da computação, que já lida com binários e hexadecimais há décadas.
+Pensando nisso, escrevo agora este guia que pretendo que seja exaustivo, porém em linguagem didática, e que explique a raiz de cada coisa no mundo dos sistemas numéricos comumente utilizados na computação — como os binários e hexadecimais.
 
 Porém, este artigo não é apenas um texto: ele é também uma experiência interativa em que eu vou apresentar a você os conceitos de maneira prática, com aplicações interativas programadas por mim mesmo. Meu propósito é fazer você ver na prática aquilo que está sendo apresentado, para que a teoria não fique tão pesada e a sua compreensão seja efetiva. Você pode até mesmo ignorar toda a teoria e ir direto para a [parte prática](#prática-com-binários), porém, na minha experiência como educador, as pessoas que obtêm o melhor aprendizado são aquelas que pelejam um pouquinho com a teoria antes de fazê-lo, mesmo que essa abordagem pareça mais difícil num primeiro momento.
 
-E, ainda, deixe-me pontuar que este trabalho está dividido em duas partes. No artigo de hoje, vamos tratar de binários. A segunda parte (que será publicada no início de 2026, após alguns adiamentos necessários causados pela vida pessoal e profissional do autor) será sobre hexadecimais e seu impacto na indústria de criptomoedas. 
+E, ainda, deixe-me pontuar que este trabalho está dividido em duas partes. No artigo de hoje, vamos tratar de binários. No futuro, haverá um artigo sobre hexadecimais.
 
-Se, em qualquer momento, você se deparou com todos aqueles estranhos números e letras (um tanto peculiares, as letras vão só até “f”!) em qualquer etapa ou processo do mundo cripto e ficou sem entender, este trabalho é para você. Vamos lá?
+Se, em qualquer momento, você se deparou com aqueles estranhos números e letras (um tanto peculiares, as letras vão só até "f"!) em algum contexto de computação e ficou sem entender, este trabalho é para você. Vamos lá?
 
 ## Decimais: A contagem humana por excelência
 
@@ -121,7 +121,7 @@ No mundo da eletrônica, os transistores [^transistores] funcionam como esses in
 
 A ampla margem entre as faixas de $0$ e $1$ é o que torna o sistema robusto. Uma pequena variação de voltagem causada por ruído ou interferência não altera o estado lógico. Um pulso de $5,1V$ ainda será lido como um $1$, e um de $0,2V$ ainda será lido como um $0$. A margem de erro é generosa.
 
-Por isso, o sistema binário com apenas dois estados é fundamentalmente confiável e resistente a interferências, permitindo que os bilhões de transistores em um processador trabalhem em conjunto de forma precisa e sem erros. É simples, otimizado em recursos e funcional. Por isso, o binário é a língua mãe de todo o hardware moderno, do microcontrolador mais simples até o mais poderoso servidor que seja coluna vertebral de uma rede de blockchain.
+Por isso, o sistema binário com apenas dois estados é fundamentalmente confiável e resistente a interferências, permitindo que os bilhões de transistores em um processador trabalhem em conjunto de forma precisa e sem erros. É simples, otimizado em recursos e funcional. Por isso, o binário é a língua mãe de todo o hardware moderno, do microcontrolador mais simples até o mais poderoso servidor.
 
 <div className="clear-float"></div>
 
@@ -170,7 +170,7 @@ Apenas lembre-se de que a melhor prática quando se menciona um número binário
 
 ### De binários para decimais
 
-Eu iniciei esta seção pensando em familiarizar você a toda a ideia de contagem em binários. Como dizia em sala de aula o meu caríssimo professor [Adalbery Castro](https://www.youtube.com/@adalbery), “se vocês serão bons engenheiros de computação, é importante que a contagem em binários seja uma segunda natureza para vocês, que ela esteja tão entranhada em suas mentes quanto está a contagem de 0 a 9, e que ao bater o olho em um, sei lá, $0110$… vocês consigam dizer imediatamente que se trata da quantidade seis”.
+Eu iniciei esta seção pensando em familiarizar você a toda a ideia de contagem em binários. Como dizia em sala de aula o meu caríssimo professor [Adalbery Castro](https://www.youtube.com/@adalbery), "se vocês serão bons engenheiros de computação, é importante que a contagem em binários seja uma segunda natureza para vocês, que ela esteja tão entranhada em suas mentes quanto está a contagem de 0 a 9, e que ao bater o olho em um, sei lá, $0110$… vocês consigam dizer imediatamente que se trata da quantidade seis".
 
 Entendo que a maioria que lerá este artigo não será um engenheiro ou cientista da computação e só quer entender melhor os binários e hexadecimais. De qualquer maneira, agora que você teve um primeiro contato com esse conteúdo, está na hora de você saber que essa coisa toda – a **conversão de decimais para binários** – está sistematizada por uma regra matemática bem definida.
 
@@ -192,7 +192,7 @@ Ou, em outras palavras: lembra-se de como, no sistema decimal, a cada passo que 
 
 <span style={{fontSize: '0.7em', color: '#666'}}>[Quis pular? Volte para Introdução.](#introdução)</span>
 
-Agora, você se lembra de como nós dissemos que a máquina, em seu nível mais baixo, só entende a linguagem de “acender” ou “apagar” interruptores? Assim é como ela, igualmente, entende os números. Você quer representar um determinado número? Então saiba exatamente quais dígitos “acender” (isto é, transformar em 1), e quais “apagar” (isto é, manter como zero).
+Agora, você se lembra de como nós dissemos que a máquina, em seu nível mais baixo, só entende a linguagem de "acender" ou "apagar" interruptores? Assim é como ela, igualmente, entende os números. Você quer representar um determinado número? Então saiba exatamente quais dígitos "acender" (isto é, transformar em 1), e quais "apagar" (isto é, manter como zero).
 
 Deixamos para você, abaixo, um quadro interativo para você brincar e se familiarizar: 
 
@@ -269,19 +269,11 @@ $11111010+1=11111011$
 
 Pronto! Em um sistema de $8$ bits usando complemento de dois, a sequência $11111011$ é a representação de $−5$.
 
-Os negativos são importantes pelas razões que vamos detalhar abaixo.
-
-O algoritmo que garante que só você pode movimentar seus fundos (em Bitcoin, Ethereum e muitas outras redes) é o ECDSA. A matemática por trás dele envolve operações com curvas elípticas sobre campos finitos. Embora os resultados finais (a assinatura $\textrm{r}$ e $\textrm{s}$) sejam números positivos, os cálculos intermediários para gerar e verificar essas assinaturas, especialmente o cálculo de inversos modulares (usando algoritmos como o Euclidiano Estendido), dependem fundamentalmente de uma aritmética que possa lidar com valores que, conceitualmente, são negativos.
-
-O complemento de dois é a forma como o processador executa essa matemática de forma eficiente. Sem entender como os números com sinal funcionam no nível do hardware, a implementação desses algoritmos criptográficos se torna uma caixa-preta.
-
 ### Limitações do binário em escala
 
-Embora o binário seja poderoso, ele tem limitações. Em um número fixo de bits (ex.: $8$ bits), o máximo é $11111111$ ($255$ decimal). Se você somar $1$, ocorre _overflow_ (transbordamento), voltando a $00000000$, o que pode causar erros em cálculos. Em criptomoedas, isso é crítico: chaves com poucos bits são vulneráveis a ataques de força bruta.
+Embora o binário seja poderoso, ele tem limitações. Em um número fixo de bits (ex.: $8$ bits), o máximo é $11111111$ ($255$ decimal). Se você somar $1$, ocorre _overflow_ (transbordamento), voltando a $00000000$, o que pode causar erros em cálculos.
 
-Além disso, para números fracionários, usamos representações como ponto flutuante (IEEE 754), mas isso introduz perdas de precisão em operações, o que pode afetar contratos inteligentes ou transações precisas.
-
-Em vez disso, as criptomoedas utilizam representações inteiras com subunidades fixas para evitar esses problemas. Por exemplo, no Bitcoin, todas as quantias são armazenadas como inteiros em satoshis ($1$ BTC = $100.000.000$ satoshis). O ponto decimal é ajustado apenas na interface do usuário. No Ethereum, usa-se wei ($1$ ETH = $10^{18}$ wei), também como inteiros.
+Além disso, para números fracionários, usamos representações como ponto flutuante (IEEE 754), mas isso introduz perdas de precisão em operações. Por esse motivo, sistemas que exigem precisão absoluta costumam trabalhar com inteiros e subunidades fixas, ajustando o ponto decimal apenas na interface com o usuário.
 
 ## Bits e bytes
 
@@ -289,7 +281,7 @@ Você entendeu a lógica dos binários. Você sabe que o computador representa, 
 
 Agora, deixe-me explicar o que é um <AudioWord word="bit" audioSrc="/audio/bit.mp3" /> e o que é um <AudioWord word="byte" audioSrc="/audio/byte.mp3" />.
 
-Imagine o endereço de uma carteira de criptomoedas (ou ainda um hash SHA-256), que é um número gigantesco. Em binário, ele seria algo como:
+Imagine um número gigantesco produzido por um algoritmo computacional, como um hash SHA-256. Em binário, ele seria algo como:
 
 100110110100011101010111011100... (e isso continuaria por muitas linhas).
 
@@ -305,23 +297,17 @@ Veja um exemplo de como estruturar bits em conjuntos de bytes:
 
 `10110001 11010010 00101110 11110000` <br/> `01001101 10101011 11001000 01110110` <br/> `00110100 11101001 10010001 01011010` <br/> `11110011 00001111 10111000 10001000`
 
-Para exemplificar a relevância dos bytes em nosso contexto de criptomoedas, saiba disto: um hash SHA-256 tem $32$ bytes ($256$ bits), e uma chave privada padrão também tem $32$ bytes. Essa arquitetura centrada em bytes é uma restrição crítica e inegociável que determina como os dados são estruturados e tratados em um nível baixo.
+Para exemplificar a relevância dos bytes: um hash SHA-256 tem $32$ bytes ($256$ bits). Essa arquitetura centrada em bytes é uma convenção fundamental que determina como os dados são estruturados e tratados em sistemas de computação.
 
 ## Difícil? Não esquente!
 
-Se você não entendeu algumas coisas, não se assuste. Há muitas coisas que eu mencionei que são inteiramente outras áreas do estudo e construção de criptomoedas, para além dos sistemas de numeração. O último parágrafo é um grande exemplo de como estamos pisando em território novo para muita gente, já que ele trata das áreas de algoritmos criptográficos e cybersegurança de criptomoedas.
-
-Vamos abordar esse mundo e outros com maiores detalhes aqui em **HashTral** em ocasiões futuras. Estou desde já introduzindo esses assuntos também para todos saberem que o que estamos discutindo aqui não é um mundo teórico matemático apartado da prática técnica com criptomoedas.
-
-De qualquer maneira, sabe quem chegou ao Brasil fazendo um trabalho sensacional sobre todos os aspectos mais técnicos do mundo cripto para que você não precise se preocupar com nada? A [Coins.xyz](https://www.coins.xyz/en/register?invite_code=2000647282118095360&broker=9010), com uma equipe experiente e inovadora, liderada por profissionais com background em grandes players do setor cripto.
-
-Usar a **Coins** é muito fácil, você pode usar no seu computador, você pode baixar o aplicativo em seu smartphone, você pode mandar o que quiser para quem quiser, a hora que quiser. É Bitcoin, é Ethereum, é Solana, são as stablecoins, é o que você quiser. Fácil e instantâneo, com segurança e conformidade regulatória comprovadas globalmente, atendendo a mais de 18 milhões de usuários em mais de 100 países. É qualidade testada e aprovada por **HashTral**.
+Se você não entendeu algumas coisas, não se assuste. Há muitos conceitos mencionados aqui que pertencem a outras áreas da computação, para além dos sistemas de numeração. O importante é construir a base gradualmente — e é exatamente isso que estamos fazendo.
 
 ## No próximo artigo...
 
-Vamos continuar os assuntos **Sistemas Numéricos** no próximo artigo de **HashTral**. A segunda parte tratará dos números hexadecimais, cuja plena compreensão está intimamente ligada à compreensão dos números binários. Essa parte seguinte será publicada em janeiro de 2026.
+No futuro, haverá um artigo sobre hexadecimais, cuja plena compreensão está intimamente ligada à compreensão dos números binários.
 
-Eu também preciso anunciar que estamos [aceitando sugestões](mailto:ramirokord@gmail.com) de quais assuntos tratar em nossos próximos artigos interativos. Mande um e-mail para [ramirokord@gmail.com](mailto:ramirokord@gmail.com) com o assunto "Sugestão Artigo". Ou, alternativamente, encontre-me no X: [&commat;RamiroKord](http://www.x.com/ramirokord). Eu leio todas as mensagens!
+Eu também estou [aceitando sugestões](mailto:ramirokord@gmail.com) de quais assuntos tratar em nossos próximos artigos interativos. Mande um e-mail para [ramirokord@gmail.com](mailto:ramirokord@gmail.com) com o assunto "Sugestão Artigo". Ou, alternativamente, encontre-me no X: [&commat;RamiroKord](http://www.x.com/ramirokord). Eu leio todas as mensagens!
 
 Obrigado pela leitura... e até a segunda parte!
 
@@ -349,17 +335,17 @@ Para converter um número decimal para binário, você pode usar o método de di
 
 Computadores usam o sistema de "complemento de dois" para representar números negativos. Essa abordagem resolve problemas de ter duas representações para o zero e permite que a subtração seja tratada como adição. Para converter um número positivo para sua representação negativa em complemento de dois, inverte-se todos os bits e depois soma-se $1$ ao resultado.
 
-6. **Qual a importância dos binários para criptomoedas?**
+6. **Qual a importância dos binários para a computação?**
 
-Os binários são a base de toda a computação, e as criptomoedas são construídas sobre princípios de ciência da computação. Algoritmos criptográficos, como o ECDSA (usado no Bitcoin e Ethereum para garantir que você possa movimentar seus fundos), dependem de operações matemáticas que são executadas eficientemente pelos processadores em binário, inclusive com a manipulação de números negativos via complemento de dois.
+O binário é a base de toda a computação moderna. Algoritmos, estruturas de dados, protocolos de rede e sistemas criptográficos são todos construídos sobre operações que os processadores executam em binário. Sem o sistema binário, não haveria computadores como os conhecemos hoje.
 
 7. **O que são "bits" e "bytes"?**
 
-Um bit é a menor unidade de informação em um sistema binário, representando um $0$ ou $1$. Um byte é um agrupamento padronizado de $8$ bits. Bytes são cruciais para a forma como os dados são estruturados e tratados em sistemas de computação, incluindo as criptomoedas. Por exemplo, um hash SHA-256 e uma chave privada padrão têm $32$ bytes ($256$ bits).
+Um bit é a menor unidade de informação em um sistema binário, representando um $0$ ou $1$. Um byte é um agrupamento padronizado de $8$ bits. Bytes são cruciais para a forma como os dados são estruturados e tratados em sistemas de computação. Por exemplo, um hash SHA-256 tem $32$ bytes ($256$ bits).
 
 8. **Por que o artigo está dividido em duas partes?**
 
-Este artigo foca nos binários. A segunda parte, que será publicada em janeiro de 2026, abordará os números hexadecimais e sua relação com a indústria de criptomoedas.
+Este artigo foca nos binários. No futuro, haverá um artigo sobre hexadecimais, cuja compreensão plena está intimamente ligada à compreensão dos números binários.
 
 Se você deseja aprender mais, o artigo oferece um conversor interativo de binários para decimais para você praticar.
 
@@ -370,8 +356,6 @@ O artigo foi escrito por Ramiro Kord ([&commat;RamiroKord](http://www.x.com/rami
 [^boole-shannon]: Tal simplicidade remonta às contribuições históricas de figuras como [George Boole](https://wiki.inf.ufpr.br/computacao/doku.php?id=g:george_boole), que desenvolveu a álgebra booleana no século XIX, fundamentando a lógica binária, e [Claude Shannon](https://mentalidadesmatematicas.org.br/claude-elwood-shannon-conheca-o-pai-da-teoria-da-informacao/), que no século XX aplicou essa lógica à teoria da informação e circuitos elétricos, pavimentando o caminho para a computação moderna.
 
 [^contagem_bin]: Ler binários como sequências de dígitos ("zero", "zero-um", "um-zero", "um-um") em vez de nomes decimais é uma prática comum e recomendada em contextos educacionais ou técnicos. Evita confusão, especialmente ao discutir números binários verbalmente
-
-[^ethereum-case]: Caso você esteja se perguntando, as letras maiúsculas e minúsculas no endereço Ethereum que eu mostrei são uma aplicação de verificação de erros ao se fazer transferência de dinheiro, mas você não precisa saber disso agora, não para os fins deste artigo. (linkar algum artigo que trate especificamente disso)
 
 [^leading-zeros]: Note que zeros à esquerda, chamados de *leading zeros*, não alteram o valor do número, servindo apenas para padronizar o comprimento.
 
