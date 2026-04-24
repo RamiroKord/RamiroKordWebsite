@@ -5,6 +5,12 @@ type ServerContext =
   | GetServerSidePropsContext
   | { req: NextApiRequest; res: NextApiResponse }
 
+function getExistingCookies(ctx: ServerContext): string[] {
+  const existing = ctx.res.getHeader('Set-Cookie')
+  if (!existing) return []
+  return Array.isArray(existing) ? existing : [String(existing)]
+}
+
 export function createServerSupabaseClient(ctx: ServerContext) {
   return createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -13,10 +19,16 @@ export function createServerSupabaseClient(ctx: ServerContext) {
       cookies: {
         get: (name) => ctx.req.cookies[name],
         set: (name, value, _options: CookieOptions) => {
-          ctx.res.setHeader('Set-Cookie', `${name}=${value}; Path=/; HttpOnly; SameSite=Lax`)
+          ctx.res.setHeader('Set-Cookie', [
+            ...getExistingCookies(ctx),
+            `${name}=${value}; Path=/; HttpOnly; SameSite=Lax`,
+          ])
         },
         remove: (name, _options: CookieOptions) => {
-          ctx.res.setHeader('Set-Cookie', `${name}=; Max-Age=0; Path=/; HttpOnly; SameSite=Lax`)
+          ctx.res.setHeader('Set-Cookie', [
+            ...getExistingCookies(ctx),
+            `${name}=; Max-Age=0; Path=/; HttpOnly; SameSite=Lax`,
+          ])
         },
       },
     }

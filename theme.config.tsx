@@ -3,6 +3,38 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 import { useRouter } from 'next/router'
 import { useConfig } from 'nextra-theme-docs'
 import FloatImage from './components/FloatImage'
+import { useUser } from './context/UserContext'
+
+function NavbarAuth() {
+  const { user, loading, openAuthModal, signOut } = useUser()
+
+  if (loading) return null
+
+  if (user) {
+    return (
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+        <span style={{ fontSize: '0.875rem', opacity: 0.6, maxWidth: '160px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+          {user.email}
+        </span>
+        <button
+          onClick={signOut}
+          style={{ fontSize: '0.875rem', padding: '0.25rem 0.875rem', borderRadius: '0.5rem', border: '1px solid #d1d5db', cursor: 'pointer', background: 'transparent' }}
+        >
+          Sair
+        </button>
+      </div>
+    )
+  }
+
+  return (
+    <button
+      onClick={openAuthModal}
+      style={{ fontSize: '0.875rem', padding: '0.375rem 1rem', borderRadius: '0.5rem', background: '#2563eb', color: '#fff', fontWeight: 600, border: 'none', cursor: 'pointer' }}
+    >
+      Entrar
+    </button>
+  )
+}
 
 const config: DocsThemeConfig = {
   logo: <span>HashTral</span>,
@@ -13,6 +45,9 @@ const config: DocsThemeConfig = {
     link: 'https://discord.com',
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  navbar: {
+    extraContent: <NavbarAuth />,
+  },
   
   // Add custom head for page title
   head: () => {
