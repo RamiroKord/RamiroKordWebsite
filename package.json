@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/shuding/nextra-docs-template#readme",
   "dependencies": {
+    "@supabase/ssr": "^0.10.2",
+    "@supabase/supabase-js": "^2.104.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
     "katex": "^0.16.27",
